@@ -9,11 +9,18 @@ public class RoomType {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
 
-    @Column(name = "name")
+    @Column(nullable = false)
     private String name;
+
+    public RoomType() {
+    }
+
+    public RoomType(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public Long getId() {
         return id;
