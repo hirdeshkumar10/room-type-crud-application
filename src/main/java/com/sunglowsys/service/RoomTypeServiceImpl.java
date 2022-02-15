@@ -8,10 +8,12 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import javax.transaction.Transactional;
+
 import java.util.Optional;
 
 @Service
+@Transactional
 public class RoomTypeServiceImpl implements RoomTypeService{
 
     private final Logger log = LoggerFactory.getLogger(RoomTypeServiceImpl.class);
